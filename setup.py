@@ -7,7 +7,7 @@ if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist upload -r pypi')
     sys.exit()
 
-PACKAGE_VERSION = '0.0.1'
+PACKAGE_VERSION = '0.0.2'
 PACKAGE_DOWNLOAD_URL = (
     'https://github.com/dbader/jack/tarball/' + PACKAGE_VERSION
 )
