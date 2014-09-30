@@ -1,16 +1,21 @@
 import codecs
 import os
 import sys
+
 from distutils.core import setup
+from pip.req import parse_requirements
 
 if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist upload -r pypi')
     sys.exit()
 
-PACKAGE_VERSION = '0.0.2'
+PACKAGE_VERSION = '0.0.3'
 PACKAGE_DOWNLOAD_URL = (
     'https://github.com/dbader/jack/tarball/' + PACKAGE_VERSION
 )
+
+install_reqs = parse_requirements('requirements.txt')
+reqs = [str(ir.req) for ir in install_reqs]
 
 def read_file(filename):
     """
@@ -30,6 +35,7 @@ setup(
     author_email='mail@dbader.org',
     url='https://github.com/dbader/jack',
     download_url=PACKAGE_DOWNLOAD_URL,
+    install_requires=reqs,
     entry_points={
         'console_scripts': [
             'jack = jack:_main',
