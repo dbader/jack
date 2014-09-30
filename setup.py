@@ -30,6 +30,11 @@ setup(
     author_email='mail@dbader.org',
     url='https://github.com/dbader/jack',
     download_url=PACKAGE_DOWNLOAD_URL,
+    entry_points={
+        'console_scripts': [
+            'jack = jack:_main',
+        ],
+    },
     keywords=[
         'jack', 'log', 'logs', 'logging', 'query',
         'search'

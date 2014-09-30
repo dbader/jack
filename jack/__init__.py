@@ -140,5 +140,9 @@ def main(argv):
         logfile.close()
 
 
-if __name__ == '__main__':
+def _main():
     sys.exit(main(sys.argv))
+
+
+if __name__ == '__main__':
+    _main()
