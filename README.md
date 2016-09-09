@@ -44,4 +44,4 @@ To run jack, `cd` to a directory with log files (`.log` or `.log.gz` extension) 
 (todo)
 
 ## Where to get help
-Talk to [@dbader](https://twitter.com/dbader).
+Talk to [@dbader_org](https://twitter.com/dbader_org).
