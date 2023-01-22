@@ -1,7 +1,7 @@
-name: lint_python
+name: pytest
 on: [pull_request, push]
 jobs:
-  lint_python:
+  pytest:
     strategy:
       fail-fast: false
       matrix:
@@ -13,5 +13,6 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: pip install --upgrade pip wheel
+      - run: pip install .
       - run: pip install pytest
       - run: pytest .
