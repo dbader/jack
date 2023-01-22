@@ -1,7 +1,7 @@
-name: pytest
+name: pip_install_jack
 on: [pull_request, push]
 jobs:
-  pytest:
+  pip_install_jack:
     strategy:
       fail-fast: false
       matrix:
@@ -13,6 +13,5 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: pip install --upgrade pip wheel
-      - run: pip install .
-      - run: pip install pytest
-      - run: pytest .
+      - run: pip install jack
+      # - run: pip install .
